@@ -10,13 +10,17 @@ def download(username="", password=""):
     if(username == "" and password == ""):
         return False
 
+    # Create Webdriver
+    options = webdriver.chrome.options.Options()
+    options.add_argument("log-level=3")
+    browser = webdriver.Chrome(ChromeDriverManager().install(), options=options)
+    
     # Open Letterboxd Login URL
-    browser = webdriver.Chrome(ChromeDriverManager().install())
     url = 'https://letterboxd.com/sign-in/'
     browser.get(url)
     browser.maximize_window()
     signin_title = browser.title
-    time.sleep(1.5)
+    time.sleep(1)
 
     # Get Sign In Elements
     username_el = browser.find_element_by_name("username")
@@ -40,6 +44,6 @@ def download(username="", password=""):
     url = "https://letterboxd.com/data/export/"
     browser.execute_script(f"window.open('{url}')")
     browser.switch_to_window(browser.window_handles[-1])
-    time.sleep(10) # Give time to download
+    time.sleep(7) # Give time to download
     browser.quit()
     return True
