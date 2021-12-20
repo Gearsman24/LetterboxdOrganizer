@@ -33,6 +33,7 @@ def download(username="", password=""):
 
     # Check for Successful Login
     if(signin_title == browser.title):
+        browser.quit()
         return False
 
     # Open Letterboxd Export URL -> Download Data to Computer
