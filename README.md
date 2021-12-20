@@ -1,7 +1,11 @@
 # LetterboxdOrganizer
+<<<<<<< Updated upstream
+LetterboxdOrganizer takes your lists from Letterboxd and categorizes them into different 'folders' (csv files) for better management and access
+=======
 
 A Python application to categorize your Letterboxd lists into folders
-* Each folder is represented as a Microsoft Excel file (.xlsx) and each sheet is a list in the folder
+* Each folder is represented as a Microsoft Excel file (.xlsx)
+* Each Excel sheet is a list in the folder
 
 ## App Requirements
 * The user needs to have:
@@ -14,25 +18,19 @@ A Python application to categorize your Letterboxd lists into folders
 * Install Python [here](https://www.python.org/downloads/)
 
 Clone the Repository:
-'''bash
-git clone https://github.com/Gearsman24/LetterboxdOrganizer.git
-'''
+* git clone https://github.com/Gearsman24/LetterboxdOrganizer.git
+
 
 Required Packages:
 * pandas:
-''''bash
-pip install pandas
-'''
+    * pip install pandas
+
 * selenium:
-'''bash
-pip install selenium
-'''
+    * pip install selenium
 * webdriver_manager:
-'''bash
-pip install webdriver-manager
-'''
+    * pip install webdriver-manager
+
 
 ### Executable Command
-'''bash
-python .\LetterboxdOrganizer.py
-'''
+* python .\LetterboxdOrganizer.py
+>>>>>>> Stashed changes
